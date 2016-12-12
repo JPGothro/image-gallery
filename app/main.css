@@ -3,3 +3,6 @@ header, h1, label {
     color: darkgreen;
 }
 
+li {
+    list-style-type: none;
+}

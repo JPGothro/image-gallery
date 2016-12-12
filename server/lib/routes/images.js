@@ -30,11 +30,18 @@ router
         .catch(next);
     })
 
-
     .post('/', bodyParser, (req, res, next) => {
         new Image(req.body).save()
         .then(saved => res.send(saved))
         .catch(next);
+    })
+    
+    .delete('/:id', (req, res, next) => {
+        let imageId = req.params.id;
+        console.log('delete of image with id:', imageId);
+        Image.findByIdAndRemove(imageId)
+            .then(removed => res.send(removed))
+            .catch(next);
     });
 
 module.exports = router;

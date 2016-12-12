@@ -13,7 +13,7 @@ const module = angular.module('services', []);
 
 context.keys().forEach(key => {
     const name = camelcase(path.basename(key, '.js'));
-    module.component(name, context(key).default);
+    module.factory(name, context(key).default);
 });
 
 export default module.name;

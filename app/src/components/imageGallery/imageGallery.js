@@ -5,7 +5,7 @@ import styles from './imageGallery.css';
 export default {
     template,
     bindings: {
-        image: '='
+        images: '='
     },
     controller () {this.styles = styles;}
 };

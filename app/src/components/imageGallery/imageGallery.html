@@ -1,4 +1,8 @@
 
 <div class="{{$ctrl.styles.full}}">
-    <img ng-src="{{$ctrl.image.url}}" alt="{{$ctrl.image.description}}">
+    <ul>
+        <li ng-repeat="image in $ctrl.images">
+            <img ng-src="{{image.url}}" alt="{{image.description}}">
+        </li>
+    </ul>
 </main>

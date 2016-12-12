@@ -1,11 +1,20 @@
 
 import template from './imageView.html';
-import styles from './imageView.css'
+import styles from './imageView.css';
 
 export default {
     template,
     bindings: {
-        image: '='
+        images: '=',
+        remove: '<'
     },
-    controller () {this.styles = styles;}
+    controller
+};
+
+function controller () {
+    this.styles = styles;
+
+    this.trash = (image) => {
+        this.remove(image);
+    };
 };

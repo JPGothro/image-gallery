@@ -1,6 +1,12 @@
 
 <div class="{{$ctrl.styles.view}}">
-    <p>Image Title: {{$ctrl.image.title}}</p>
-    <p><a href="{{$ctrl.image.url}}" target="_blank">Link To: {{$ctrl.image.title}}</a></p>
-    <p>Image Description: {{$ctrl.image.description}}</p>
+    <ul>
+        <li ng-repeat="image in $ctrl.images">
+            <hr>
+            <p>Image Title: {{image.title}}</p>
+            <p><a href="{{image.url}}" target="_blank">Link To: {{image.title}}</a></p>
+            <p>Image Description: {{image.description}}</p>
+            <button ng-click="$ctrl.trash(image)">Remove Image</button>
+        </li>
+    </ul>
 </div>

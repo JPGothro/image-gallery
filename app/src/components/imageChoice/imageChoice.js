@@ -7,8 +7,9 @@ export default {
     controller
 };
 
+controller.$inject = ['imageService'];
 
-function controller() {
+function controller(imageService) {
     this.choices = [
         {name: 'Gallery', value: 'gallery'},
         {name: 'Thumbnail', value: 'thumbnail'},
@@ -17,10 +18,25 @@ function controller() {
 
     this.myChoice = this.choices[2];
 
-    this.image = 
-    {title: 'Cutest Bunny EVER!',
-        url: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg',
-        description: 'A very small, cute bunny rabbit.'
+    this.images = [];
+
+    imageService.get()
+        .then(images => {
+            this.images = images;
+        });
+
+    this.add = image => {
+        imageService.add(image)
+            .then(saved => this.images.push(saved));
     };
+
+    this.remove = image => {
+        imageService.remove(image)
+            .then(removed => {
+                let theIndex = this.images.indexOf(image);
+                if (theIndex > -1) this.images.splice(theIndex, 1);
+            });
+    };
+
 };
 

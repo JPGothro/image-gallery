@@ -1,4 +1,8 @@
 
-<div class="{{$ctrl.styles.thumb}}" >
-    <a href="{{$ctrl.image.url}}" target="_blank"><img ng-src="{{$ctrl.image.url}}"></a>
+<div class="{{$ctrl.styles.thumb}}">
+    <ul>
+        <li ng-repeat="image in $ctrl.images">
+            <a href="{{image.url}}" target="_blank"><img ng-src="{{image.url}}"></a>
+        </li>
+    </ul>
 </div>

@@ -4,10 +4,10 @@
     <select ng-model="$ctrl.myChoice" ng-options="choice.name for choice in $ctrl.choices"></select>
     <hr>
 
-    <image-view ng-if="$ctrl.myChoice.value === 'view'" image="$ctrl.image"></image-view>
-    <image-gallery ng-if="$ctrl.myChoice.value === 'gallery'" image="$ctrl.image"></image-gallery>
-    <image-thumbnail ng-if="$ctrl.myChoice.value === 'thumbnail'" image="$ctrl.image"></image-thumbnail>
+    <image-view ng-if="$ctrl.myChoice.value === 'view'" images="$ctrl.images" remove="$ctrl.remove"></image-view>
+    <image-gallery ng-if="$ctrl.myChoice.value === 'gallery'" images="$ctrl.images"></image-gallery>
+    <image-thumbnail ng-if="$ctrl.myChoice.value === 'thumbnail'" images="$ctrl.images"></image-thumbnail>
 
     <hr>
-    <image-add image="$ctrl.image"></image-add>
+    <image-add add="$ctrl.add"></image-add>
 </section>

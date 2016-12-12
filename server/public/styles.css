@@ -1,9 +1,14 @@
 ._1YPI68rRVc_YD77FPrlEse p {
-    margin: 0 auto;
+    margin: .1em auto;
 }
 
 ._1YPI68rRVc_YD77FPrlEse button {
     color: black;
+    background-color: white;
+}
+
+._1YPI68rRVc_YD77FPrlEse button:hover {
+    background-color: lightblue;
 }
 .j8D9hzv5OzJceebzwThPy img {
     max-width: 100%;
@@ -14,10 +19,25 @@
     max-width: 100px;
     max-height: 100px;
 }
+.eXDYY1Bd5BRBPn1esoQgd p {
+    margin:  auto;
+}
+
+.eXDYY1Bd5BRBPn1esoQgd button {
+    color: black;
+    background-color: white;
+}
+
+.eXDYY1Bd5BRBPn1esoQgd button:hover {
+    background-color: palegreen;
+}
 
 header, h1, label {
     color: darkgreen;
 }
 
+li {
+    list-style-type: none;
+}
 
 /*# sourceMappingURL=styles.css.map*/
