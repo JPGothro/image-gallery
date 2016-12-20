@@ -33022,7 +33022,7 @@
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class=\"about\">\n    <h1>About Image (Re)Viewer</h1>\n    <hr>\n    <h3>Image (Re)Viewer</h3>\n    <hr>\n    <p>This app will display images that have been added into its storage. One can choose to view these images in one of three different ways.</p>\n    <p>That choice is made through a drop down selection menu.</p>\n    <p>More images may be added through the input fields at the bottom of each view. Existing images may be removed by clicking on the 'Remove Image' button on the 'View' page.</p>\n\n</section>\n\n";
+	module.exports = "\n<section class=\"about\">\n    <h1>About Image (Re)Viewer</h1>\n    <hr>\n    <p>This app will display images that have been added into its storage. One can choose to view these images in one of three different ways.</p>\n    <p>That choice is made through a drop down menu selection.</p>\n    <p>More images may be added through the input fields at the bottom of each view. Existing images may be removed by clicking on the 'Remove Image' button on the 'View' page.</p>\n\n</section>\n\n";
 
 /***/ },
 /* 10 */
@@ -33163,7 +33163,7 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section>\n    <div class=\"choices\">\n        <label>Viewing Choices:</label>\n        <select ng-model=\"$ctrl.myChoice\" ng-options=\"choice.name for choice in $ctrl.choices\"></select>\n        <!--<span ng-repeat=\"choice in ['gallery', 'thumbnail', 'view']\">\n        <input type=\"radio\" ng-model=\"$ctrl.myChoice\" ng-change=\"\"\n                name=\"choice\" ng-value=\"choice\" >\n        </span-->\n    </div>\n    <hr>\n\n    <image-view ng-if=\"$ctrl.myChoice.value === 'view'\" images=\"$ctrl.images\" remove=\"$ctrl.remove\"></image-view>\n    <image-gallery ng-if=\"$ctrl.myChoice.value === 'gallery'\" images=\"$ctrl.images\"></image-gallery>\n    <image-thumbnail ng-if=\"$ctrl.myChoice.value === 'thumbnail'\" images=\"$ctrl.images\"></image-thumbnail>\n\n    <hr>\n    <image-add add=\"$ctrl.add\"></image-add>\n</section>\n";
+	module.exports = "\n<section>\n    <div class=\"choices\">\n        <h3>Choose your image display</h3>\n        <label>Viewing Choices:</label>\n        <select ng-model=\"$ctrl.myChoice\" ng-options=\"choice.name for choice in $ctrl.choices\"></select>\n        <!--<span ng-repeat=\"choice in ['gallery', 'thumbnail', 'view']\">\n        <input type=\"radio\" ng-model=\"$ctrl.myChoice\" ng-change=\"\"\n                name=\"choice\" ng-value=\"choice\" >\n        </span-->\n    </div>\n    <hr>\n\n    <image-view ng-if=\"$ctrl.myChoice.value === 'view'\" images=\"$ctrl.images\" remove=\"$ctrl.remove\"></image-view>\n    <image-gallery ng-if=\"$ctrl.myChoice.value === 'gallery'\" images=\"$ctrl.images\"></image-gallery>\n    <image-thumbnail ng-if=\"$ctrl.myChoice.value === 'thumbnail'\" images=\"$ctrl.images\"></image-thumbnail>\n\n    <hr>\n    <image-add add=\"$ctrl.add\"></image-add>\n</section>\n";
 
 /***/ },
 /* 20 */
@@ -33351,7 +33351,7 @@
 /* 35 */
 /***/ function(module, exports) {
 
-	module.exports = "<section>\n    <h3>Choose your image display</h3>\n    <a ui-sref=\"welcome\" ui-sref-active=\"\">Home</a>\n    <a ui-sref=\"images\" ui-sref-active=\"\">Images</a>\n    <a ui-sref=\"about\" ui-sref-active=\"\">About</a>\n    <main>\n        <ui-view></ui-view>\n    </main>\n</section>";
+	module.exports = "<section>\n    <hr>\n    <a ui-sref=\"welcome\" ui-sref-active=\"\">Home</a>\n    <a ui-sref=\"images\" ui-sref-active=\"\">Images</a>\n    <a ui-sref=\"about\" ui-sref-active=\"\">About</a>\n    <hr>\n    <main>\n        <ui-view></ui-view>\n    </main>\n</section>";
 
 /***/ },
 /* 36 */
@@ -41866,7 +41866,7 @@
 	    $stateProvider.state({
 	        name: 'images',
 	        url: '/images',
-	        component: 'images'
+	        component: 'imageChoice'
 	    });
 	
 	    $stateProvider.state({

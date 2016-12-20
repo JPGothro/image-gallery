@@ -1,5 +1,12 @@
 @import 'colors';
 
 :local(.choices) {
-    border: .2em solid $dkgreen;
+
+    span, select {
+        color: $dkgreen;
+    }
+
+    p {
+        color: $dkblue;
+    }
 }

@@ -1,5 +1,5 @@
 
-describe('image Gallery components', () => {
+describe('Image Gallery components: ', () => {
     const { assert } = chai;
 
     // mock the components module
@@ -18,7 +18,7 @@ describe('image Gallery components', () => {
     // this image is used for more than one component test
     const testImage = {title: 'testImg', url: 'a fake URL', description: 'the test image'};
 
-    describe('test parent component, imageChoice', () => {
+    describe('parent component: imageChoice', () => {
         const images = [
             {title: 'testImage', description: 'a test image', url: 'fake URL'},
             {title: 'testImageToo', description: 'another test image', url: 'fake URL too'}
@@ -70,7 +70,7 @@ describe('image Gallery components', () => {
 
     });
 
-    describe('test imageView component', () => {
+    describe('child component: imageView', () => {
         let removedItem = null;
 
         it('remove image', done => {
@@ -84,7 +84,7 @@ describe('image Gallery components', () => {
 
     });
 
-    describe('test imageAdd component', () => {
+    describe('child component: imageAdd', () => {
         let newImage = null;
         let addedImage = null;
 

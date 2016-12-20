@@ -1,5 +1,5 @@
 
-describe( 'image service', () => {
+describe( 'Image Service', () => {
     const { assert } = chai;
 
     // mock the services module

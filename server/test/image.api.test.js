@@ -30,7 +30,8 @@ describe('Validating Image routes', () => {
     const testImage = {
         title: 'Test Image',
         description: 'test image description',
-        url: 'https://dgosxlrnzhofi.cloudfront.net/custom_page_images/623/page_images/campuses-and-locations.jpg?1461711109'
+        url: 'https://dgosxlrnzhofi.cloudfront.net/custom_page_images/623/page_images/campuses-and-locations.jpg?1461711109',
+        albumId: '58547f17fe53f22a22cc1696'
     };
 
     const request = chai.request(app);
@@ -80,6 +81,21 @@ describe('Validating Image routes', () => {
             })
             .catch(done);
     });
+
+    // it ('GET all by Album ID', done => {
+    //     const query = {};
+    //     if (req.query.albumId) query.albumId = {albumId: req.query.albumId};
+
+    //     request
+    //         .get('/api/images')
+    //         .select(query).lean()
+    //         .then(res => {
+    //             // console.log('get after post response body', res.body);
+    //             assert.deepEqual(res.body, [testImage]);
+    //             done();
+    //         })
+    //         .catch(done);
+    // });
 
     it('DELETE an image', done => {
         request

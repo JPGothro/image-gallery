@@ -12,7 +12,8 @@ button.basic {
 
 .LVBOpzCDPAza16saRH3bp {
   width: 30%;
-  border: 0.1em solid darkblue; }
+  border: 0.1em solid darkblue;
+  border-radius: .5em .5em .5em 0em; }
   .LVBOpzCDPAza16saRH3bp div {
     padding: .12em; }
   .LVBOpzCDPAza16saRH3bp p {

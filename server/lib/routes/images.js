@@ -38,7 +38,6 @@ router
     
     .delete('/:id', (req, res, next) => {
         let imageId = req.params.id;
-        console.log('delete of image with id:', imageId);
         Image.findByIdAndRemove(imageId)
             .then(removed => res.send(removed))
             .catch(next);
