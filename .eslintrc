@@ -15,7 +15,10 @@
     "browser": true,
     "jquery": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "mocha": true,
+    "protractor": true,
+    "jasmine": true
   },
   "rules": {
     "semi": 1,

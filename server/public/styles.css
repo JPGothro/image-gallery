@@ -10,6 +10,50 @@ button.basic {
   button.basic:hover {
     background-color: palegreen; }
 
+._2deI_nM0Zfc9x5v-lrUG0L section {
+  width: 85%;
+  border: 0.1em solid darkblue;
+  border-radius: .5em .5em .5em 0em; }
+
+._2deI_nM0Zfc9x5v-lrUG0L div {
+  padding: .12em; }
+
+._2deI_nM0Zfc9x5v-lrUG0L p {
+  margin: .1em auto;
+  color: darkgreen; }
+button.basic {
+  color: black;
+  background-color: white; }
+  button.basic:hover {
+    background-color: palegreen; }
+
+.h1gsI_lr5fw0K26YvWwug div {
+  padding: .12em; }
+button.basic {
+  color: black;
+  background-color: white; }
+  button.basic:hover {
+    background-color: palegreen; }
+
+._36n3NrLzhqheXfrV5Xd75C ul {
+  padding: 0; }
+
+._36n3NrLzhqheXfrV5Xd75C li {
+  display: inline-block;
+  padding: .3em;
+  width: 300px; }
+
+._36n3NrLzhqheXfrV5Xd75C p {
+  margin: 0 auto; }
+
+._36n3NrLzhqheXfrV5Xd75C button {
+  border-radius: 6px; }
+button.basic {
+  color: black;
+  background-color: white; }
+  button.basic:hover {
+    background-color: palegreen; }
+
 .LVBOpzCDPAza16saRH3bp {
   width: 30%;
   border: 0.1em solid darkblue;
@@ -19,8 +63,11 @@ button.basic {
   .LVBOpzCDPAza16saRH3bp p {
     margin: .1em auto;
     color: darkgreen; }
-._1f5oTCAS6Tv79g4NhGizd8 {
-  border: 0.2em solid darkgreen; }
+._1f5oTCAS6Tv79g4NhGizd8 span, ._1f5oTCAS6Tv79g4NhGizd8 select {
+  color: darkgreen; }
+
+._1f5oTCAS6Tv79g4NhGizd8 p {
+  color: darkblue; }
 ._2pD5v6zDdUi2jX4alb2yhf img {
   max-width: 100%;
   max-height: 100%;

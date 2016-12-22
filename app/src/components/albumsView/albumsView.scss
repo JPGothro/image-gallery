@@ -2,20 +2,6 @@
 @import 'buttons';
 
 :local(.view) {
-    ul {
-        padding: 0;
-    }
-
-    li {
-        display: inline-block;
-        padding: .3em;
-        width: 300px
-    }
-
-    p {
-        margin: 0 auto;
-    }
-
     button {
         border-radius: 6px;
     }

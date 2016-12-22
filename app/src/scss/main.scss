@@ -2,10 +2,15 @@
 
 header, h1, h2, h3, label {
     color: $dkgreen;
+    margin: auto;
 }
 
 header, body {
     background-color: $blue;
+}
+
+ul {
+    margin: auto;
 }
 
 li {

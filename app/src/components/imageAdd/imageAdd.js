@@ -18,6 +18,7 @@ function controller() {
         this.title = '';
         this.url = '';
         this.description = '';
+        this.albumId = '';
     };
 
     // clear the input fields for initial display.
@@ -27,7 +28,8 @@ function controller() {
         this.add({
             title: this.title,
             url: this.url,
-            description: this.description
+            description: this.description,
+            albumId: ''
         });
         this.reset();
     };

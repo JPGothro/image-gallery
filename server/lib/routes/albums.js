@@ -3,15 +3,18 @@ const router = express.Router();
 const bodyParser = require('body-parser').json();
 
 const Album = require('../models/album');
+const Image = require('../models/image');
 
 router
     .get('/', (req, res, next) => {
         Album.find({}).lean()
             .then(albums => {
                 if (!albums || albums.length === 0) {
-                    next({code: 404, message: 'No album found.'});
+                    next({code: 404, message: 'No albums found.'});
                 }
-                else res.send(albums);
+                else {
+                    res.send(albums);
+                };
             })
             .catch(next);        
     })
@@ -19,11 +22,16 @@ router
     .get('/:id', (req, res, next) => {
         let albumId = req.params.id;
 
-        Album.findById(albumId).lean()
-        .then(album => {
+        Promise
+            .all([
+                Album.findById(albumId).lean(),
+                Image.find({albumId}).select('title description url').lean()
+            ])
+        .then(([album, images]) => {
             if (!album) {
                 next({code: 404, message: 'No album found.'});
             }
+            album.images = images;
             res.send(album);            
         })
         .catch(next);

@@ -2,11 +2,14 @@
 @import 'colors';
 @import 'buttons';
 
-:local(.add-new) {
-        width: 50%;
+:local(.addnew) {
+    section {
+        width: 85%;
         border: .1em solid $dkblue;
         border-radius: .5em .5em .5em 0em;
-    
+        background-color: $yellow;
+    }
+
     div {
         padding: .12em;
     }

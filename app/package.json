@@ -4,12 +4,15 @@
   "description": "Build 3 displays",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --inline",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
     "test": "karma start --single-run",
     "test:watch": "karma start",
-    "pretest": "npm run lint",
-    "lint": "eslint ."
+    "start": "webpack-dev-server --inline",
+    "build": "webpack",
+    "update-webdriver": "webdriver-manager update",
+    "e2e": "protractor",
+    "e2e-explore": "protractor --elementExplorer"
   },
   "repository": {
     "type": "git",
@@ -47,6 +50,7 @@
     "karma-webpack": "^1.8.0",
     "mocha": "^3.2.0",
     "node-sass": "^4.0.0",
+    "protractor": "^4.0.13",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",

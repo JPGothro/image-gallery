@@ -7,8 +7,6 @@ export default {
     controller
 };
 
-controller.$inject = ['$state'];
-
 function controller() {
     this.styles = styles;
 };
