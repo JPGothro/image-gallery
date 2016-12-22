@@ -5,7 +5,16 @@ import styles from './imageThumbnail.scss';
 export default {
     template,
     bindings: {
-        images: '='
+        images: '=',
+        remove: '<'
     },
-    controller (){this.styles = styles;}
+    controller
+};
+
+function controller () {
+    this.styles = styles;
+
+    this.trash = (image) => {
+        this.remove(image);
+    };
 };

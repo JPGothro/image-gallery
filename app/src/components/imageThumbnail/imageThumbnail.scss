@@ -1,4 +1,7 @@
 
+@import 'colors';
+@import 'buttons';
+
 :local(.thumb) {
     ul {
         padding: 0;
@@ -8,6 +11,12 @@
     li {
         display: inline-block;
         padding-right: .2em;
+        max-width: 125px;
+        max-height: 125px;
+    }
+
+    div {
+        border: .12em solid $dkblue;
     }
 
     img {

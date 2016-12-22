@@ -18,12 +18,16 @@
     li {
         display: inline-block;
         padding: .3em;
-        width: 300px
+    }
+
+    .justone {
+        border: .1em solid $dkblue;
+        max-width: 20em;
     }
 
     p {
-        margin: 0 auto;
-        padding: .2em;
+        margin: 0;
+        padding: .1em;
     }
 
 }

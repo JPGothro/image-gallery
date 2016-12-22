@@ -12,7 +12,7 @@
     <h3 ng-if="$ctrl.album._id">Album: {{$ctrl.album.title}} - {{$ctrl.album.description}}</h3>
     <image-view ng-if="$ctrl.myChoice.value === 'view'" images="$ctrl.album.images" remove="$ctrl.remove"></image-view>
     <image-gallery ng-if="$ctrl.myChoice.value === 'gallery'" images="$ctrl.album.images"></image-gallery>
-    <image-thumbnail ng-if="$ctrl.myChoice.value === 'thumbnail'" images="$ctrl.album.images"></image-thumbnail>
+    <image-thumbnail ng-if="$ctrl.myChoice.value === 'thumbnail'" images="$ctrl.album.images" remove="$ctrl.remove"></image-thumbnail>
 
     <div ng-class="$ctrl.styles.choices">
         <p ng-class="$ctrl.styles.choices" ng-if="$ctrl.album.images.length === 0">No Images to display. Please add images.</p>

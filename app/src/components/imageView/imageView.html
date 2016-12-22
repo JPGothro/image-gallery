@@ -1,11 +1,23 @@
 
 <div class="{{$ctrl.styles.view}}">
-    <ul>
-        <li ng-repeat="image in $ctrl.images">
-            <p>Title: {{image.title}}</p>
-            <p><span>Link To: </span><a href="{{image.url}}" target="_blank">{{image.title}}</a></p>
-            <p>Description: {{image.description}}</p>
-            <button class="basic" ng-click="$ctrl.trash(image)">Remove Image</button>
-        </li>
-    </ul>
+<table>
+    <thead>
+        <tr>
+            <td>Remove</td>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Album</td>
+            <td>URL</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="image in $ctrl.images">
+            <td><button class="basic" ng-click="$ctrl.trash(image)">X</button></td>
+            <td>{{image.title}}</td>
+            <td>{{image.description}}</td>
+            <td>{{image.albumId}}</td>
+            <td>{{image.url}}</td>
+        </tr>
+    </tbody>
+</table>
 </div>

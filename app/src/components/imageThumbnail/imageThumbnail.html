@@ -1,8 +1,11 @@
 
-<div class="{{$ctrl.styles.thumb}}">
+<section class="{{$ctrl.styles.thumb}}">
     <ul>
         <li ng-repeat="image in $ctrl.images">
-            <a href="{{image.url}}" target="_blank"><img ng-src="{{image.url}}"></a>
+            <div>
+                <a href="{{image.url}}" target="_blank"><img ng-src="{{image.url}}"></a>
+                <button class="basic" ng-click="$ctrl.trash(image)">Remove</button>
+            </div>
         </li>
     </ul>
-</div>
+</section>

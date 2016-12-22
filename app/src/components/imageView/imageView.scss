@@ -16,6 +16,12 @@
         margin: 0 auto;
     }
 
+    td {
+        border: .1em solid $dkblue;
+        padding: 0 1.3em 0 1.3em;
+        background-color: $pwdrblue;
+    }
+
     button {
         border-radius: 6px;
     }
