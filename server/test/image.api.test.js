@@ -82,21 +82,6 @@ describe('Validating Image routes', () => {
             .catch(done);
     });
 
-    // it ('GET all by Album ID', done => {
-    //     const query = {};
-    //     if (req.query.albumId) query.albumId = {albumId: req.query.albumId};
-
-    //     request
-    //         .get('/api/images')
-    //         .select(query).lean()
-    //         .then(res => {
-    //             // console.log('get after post response body', res.body);
-    //             assert.deepEqual(res.body, [testImage]);
-    //             done();
-    //         })
-    //         .catch(done);
-    // });
-
     it('DELETE an image', done => {
         request
             .delete(`/api/images/${testImage._id}`)

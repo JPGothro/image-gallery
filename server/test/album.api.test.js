@@ -73,6 +73,7 @@ describe('Validating Album routes', () => {
         request
             .get(`/api/albums/${testAlbum._id}`)
             .then(res => {
+                testAlbum.images = [];
                 assert.deepEqual(res.body, testAlbum);
                 done();
             })

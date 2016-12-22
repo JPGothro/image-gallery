@@ -16,13 +16,16 @@ describe('Image Gallery components: ', () => {
     );
         
     // this image is used for more than one component test
-    const testImage = {title: 'testImg', url: 'a fake URL', description: 'the test image'};
+    const testImage = {title: 'testImg', url: 'a fake URL', description: 'the test image', albumId: ''};
 
     describe('parent component: imageChoice', () => {
+        const album = {};
         const images = [
-            {title: 'testImage', description: 'a test image', url: 'fake URL'},
-            {title: 'testImageToo', description: 'another test image', url: 'fake URL too'}
+            {title: 'testImage', description: 'a test image', url: 'fake URL', albumId: ''},
+            {title: 'testImageToo', description: 'another test image', url: 'fake URL too', albumId: ''}
         ];
+
+        album.images = images;
         
         const imageService = {
             get() {
@@ -36,18 +39,24 @@ describe('Image Gallery components: ', () => {
             }
         };
 
+        const albumService = {};
+
 
         it('loads images', done => {
-            let component = $component('imageChoice', {imageService});
+            let component = $component('imageChoice', {imageService, albumService});
+
+            component.$onInit();
 
             setTimeout(() => {
-                assert.equal(component.images, images);
+                assert.equal(component.album.images, images);
                 done();
             });
         });
 
         it('add an image', done => {
-            let component = $component('imageChoice', {imageService});
+            let component = $component('imageChoice', {imageService, albumService});
+
+            component.$onInit();
 
             component.add(testImage);
 
@@ -59,7 +68,9 @@ describe('Image Gallery components: ', () => {
         });
 
         it('remove an image', done => {
-            let component = $component('imageChoice', {imageService});
+            let component = $component('imageChoice', {imageService, albumService});
+
+            component.$onInit();
 
             component.remove(testImage);
             setTimeout(() => {
@@ -95,6 +106,7 @@ describe('Image Gallery components: ', () => {
             newImage.title = testImage.title;
             newImage.url = testImage.url;
             newImage.description = testImage.description;
+            newImage.albumId = testImage.albumId = '';
             newImage.addImage(testImage);
             assert.deepEqual(addedImage, testImage);
             done();
