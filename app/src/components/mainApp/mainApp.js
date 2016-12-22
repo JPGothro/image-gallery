@@ -1,5 +1,5 @@
 
-import template from './mainapp.html';
+import template from './mainApp.html';
 import styles from '../../scss/main.scss';
 
 export default {
