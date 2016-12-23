@@ -2,10 +2,16 @@ exports.config = {
 
     allScriptsTimeout: 11000,
 
+    onPrepare: function() {
+        var SpecReporter = require('jasmine-spec-reporter');
+        // add jasmine spec reporter
+        jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'all'}));
+    },
+
     // specs and suites are mutually exclusive.
     // list of file globs
     specs: [
-        'test-e2e/**/*.js'
+        'test-e2e-babel/**/*.js'
     ],
 
     // OR, define suites: specific ones or sets of tests
@@ -26,6 +32,7 @@ exports.config = {
     framework: 'jasmine',
 
     jasmineNodeOpts: {
-        defaultTimeoutInterval: 30000
+        defaultTimeoutInterval: 30000,
+        print: function() {}
     }
 };

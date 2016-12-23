@@ -38,12 +38,15 @@ button.basic {
 
 .h1gsI_lr5fw0K26YvWwug li {
   display: inline-block;
-  padding: .3em;
-  width: 300px; }
+  padding: .3em; }
+
+.h1gsI_lr5fw0K26YvWwug .justone {
+  border: 0.1em solid darkblue;
+  max-width: 20em; }
 
 .h1gsI_lr5fw0K26YvWwug p {
-  margin: 0 auto;
-  padding: .2em; }
+  margin: 0;
+  padding: .1em; }
 button.basic {
   color: black;
   background-color: white; }
@@ -111,8 +114,9 @@ button.basic {
   margin: 0 auto; }
 
 .tKv564lckBLOz7IjnkmAa td {
-  border: 0.2em solid darkblue;
-  padding: 1.3em; }
+  border: 0.1em solid darkblue;
+  padding: 0 1.3em 0 1.3em;
+  background-color: powderblue; }
 
 .tKv564lckBLOz7IjnkmAa button {
   border-radius: 6px; }

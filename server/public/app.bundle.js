@@ -33164,7 +33164,7 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section ng-class=\"$ctrl.styles.albums\">\n    <div>\n        <albums-add add=\"$ctrl.add\"></albums-add>\n    </div>\n    <hr>\n    <div>\n\n        <h3>Albums</h3>\n        <ul>\n            <li ng-repeat=\"album in $ctrl.albums\">\n                <p><a ui-sref=\"albums.images({id: album._id})\">{{album.title}}</a></p>\n                <button class=\"basic\" ng-click=\"$ctrl.remove(album)\">Remove Album</button>\n            </li>\n        </ul>\n        <hr>\n\n        <!--<albums-view albums=\"$ctrl.albums\"></albums-view>-->\n        <ui-view name=\"myimages\" ></ui-view>\n    </div>\n</section>\n";
+	module.exports = "\n<section ng-class=\"$ctrl.styles.albums\">\n    <div>\n        <albums-add add=\"$ctrl.add\"></albums-add>\n    </div>\n    <hr>\n    <div>\n\n        <h3>Current Albums</h3>\n        <ul>\n            <li ng-repeat=\"album in $ctrl.albums\">\n                <div class=\"justone\">\n                <p><a ui-sref=\"albums.images({id: album._id})\">{{album.title}}</a></p>\n                <button class=\"basic\" ng-click=\"$ctrl.remove(album)\">Remove Album</button>\n                </div>\n            </li>\n        </ul>\n        <hr>\n\n        <!--<albums-view albums=\"$ctrl.albums\"></albums-view>-->\n        <ui-view name=\"myimages\" ></ui-view>\n    </div>\n</section>\n";
 
 /***/ },
 /* 20 */
@@ -33332,7 +33332,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section>\n    <div ng-class=\"$ctrl.styles.choices\">\n        <label>View Choices:</label>\n        <select ng-model=\"$ctrl.myChoice\" ng-options=\"choice.name for choice in $ctrl.choices\"></select>\n        <!--<span ng-repeat=\"choice in $ctrl.choices\">{{choice.name}}\n        <input type=\"radio\" ng-model=\"$ctrl.myChoice\" ng-change=\"$ctrl.updateView\"\n                name=\"choice\" ng-value=\"choice.value\" checked=\"$ctrl.myChoice.value === choice.value\" >\n        </span>-->\n    </div>\n    <hr>\n    <h3 ng-if=\"$ctrl.album._id\">Album: {{$ctrl.album.title}} - {{$ctrl.album.description}}</h3>\n    <image-view ng-if=\"$ctrl.myChoice.value === 'view'\" images=\"$ctrl.album.images\" remove=\"$ctrl.remove\"></image-view>\n    <image-gallery ng-if=\"$ctrl.myChoice.value === 'gallery'\" images=\"$ctrl.album.images\"></image-gallery>\n    <image-thumbnail ng-if=\"$ctrl.myChoice.value === 'thumbnail'\" images=\"$ctrl.album.images\"></image-thumbnail>\n\n    <div ng-class=\"$ctrl.styles.choices\">\n        <p ng-class=\"$ctrl.styles.choices\" ng-if=\"$ctrl.album.images.length === 0\">No Images to display. Please add images.</p>\n    </div>\n\n    <hr>\n    <image-add add=\"$ctrl.add\" ng-if=\"$ctrl.album._id\"></image-add>\n</section>\n";
+	module.exports = "\n<section>\n    <div ng-class=\"$ctrl.styles.choices\">\n        <label>View Choices:</label>\n        <select ng-model=\"$ctrl.myChoice\" ng-options=\"choice.name for choice in $ctrl.choices\"></select>\n        <!--<span ng-repeat=\"choice in $ctrl.choices\">{{choice.name}}\n        <input type=\"radio\" ng-model=\"$ctrl.myChoice\" ng-change=\"$ctrl.updateView\"\n                name=\"choice\" ng-value=\"choice.value\" checked=\"$ctrl.myChoice.value === choice.value\" >\n        </span>-->\n    </div>\n    <hr>\n    <h3 ng-if=\"$ctrl.album._id\">Album: {{$ctrl.album.title}} - {{$ctrl.album.description}}</h3>\n    <image-view ng-if=\"$ctrl.myChoice.value === 'view'\" images=\"$ctrl.album.images\" remove=\"$ctrl.remove\"></image-view>\n    <image-gallery ng-if=\"$ctrl.myChoice.value === 'gallery'\" images=\"$ctrl.album.images\"></image-gallery>\n    <image-thumbnail ng-if=\"$ctrl.myChoice.value === 'thumbnail'\" images=\"$ctrl.album.images\" remove=\"$ctrl.remove\"></image-thumbnail>\n\n    <div ng-class=\"$ctrl.styles.choices\">\n        <p ng-class=\"$ctrl.styles.choices\" ng-if=\"$ctrl.album.images.length === 0\">No Images to display. Please add images.</p>\n    </div>\n\n    <hr>\n    <image-add add=\"$ctrl.add\" ng-if=\"$ctrl.album._id\"></image-add>\n</section>\n";
 
 /***/ },
 /* 28 */
@@ -33504,9 +33504,9 @@
 	    value: true
 	});
 	
-	var _mainapp = __webpack_require__(43);
+	var _mainApp = __webpack_require__(43);
 	
-	var _mainapp2 = _interopRequireDefault(_mainapp);
+	var _mainApp2 = _interopRequireDefault(_mainApp);
 	
 	var _main = __webpack_require__(44);
 	
@@ -33515,7 +33515,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	    template: _mainapp2.default,
+	    template: _mainApp2.default,
 	    controller: controller
 	};
 	
@@ -33528,7 +33528,7 @@
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<section>\n    <hr>\n    <a ui-sref=\"welcome\">Home</a>\n    <a ui-sref=\"about\">About</a>\n    <a ui-sref=\"albums\">Albums</a>\n    <a ui-sref=\"images\">Images</a>\n    <hr>\n    <main>\n        <ui-view></ui-view>\n    </main>\n</section>";
+	module.exports = "<section>\n    <nav>\n        <a ui-sref=\"welcome\">Home</a>\n        <a ui-sref=\"about\">About</a>\n        <a ui-sref=\"albums\">Albums</a>\n        <a ui-sref=\"images\">Images</a>\n    </nav>\n    <hr>\n    <main>\n        <ui-view></ui-view>\n    </main>\n</section>";
 
 /***/ },
 /* 44 */
